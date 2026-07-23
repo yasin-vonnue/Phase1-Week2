@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Specificity Battle</title>
+    <link rel="stylesheet" href="specificity.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Specificity Battle - Predict Before Running</h1>
+    </header>
+
+    <main>
+      <!-- Predictions: 
+         Case 1: ID will win.
+         Case 2: Element will win.
+         Case 3: ID will win.
+         Case 4: ID will win.
+         Case 5: !important will win. -->
+
+      <p class="text" id="demo" style="color: orange">
+        CSS Specificity Example
+      </p>
+
+      <!-- Wrong Predictions 
+          Case 2: Class has higher specificity than element.
+          Case 3: Inline style has higher specificity than ID.-->
+    </main>
+  </body>
+</html>

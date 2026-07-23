@@ -1,0 +1,95 @@
+/* Case 1 */
+
+/* specificity: (0,0,0,1) */
+p {
+  color: blue;
+}
+
+/* specificity: (0,0,1,0) */
+
+.text {
+  color: green;
+}
+
+/* specificity: (0,1,0,0) */
+
+#demo {
+  color: red;
+}
+
+/* Case 2 */
+
+/* specificity: (0,0,0,1) */
+
+p {
+  background: yellow;
+}
+
+/* specificity: (0,0,1,0) */
+
+.text {
+  background: lightblue;
+}
+
+/* specificity: (0,1,0,0) */
+
+#demo {
+  background: pink;
+}
+
+/* Case 3 */
+
+/* specificity: (0,0,0,1) */
+p {
+  font-size: 18px;
+}
+
+/* specificity: (0,0,1,0) */
+
+.text {
+  font-size: 24px;
+}
+
+/* specificity: (0,1,0,0) */
+
+#demo {
+  font-size: 30px;
+}
+
+/* Case 4 */
+
+/* specificity: (0,0,0,1) */
+p {
+  border: 2px solid black;
+}
+
+/* specificity: (0,0,1,0) */
+
+.text {
+  border: 2px solid blue;
+}
+
+/* specificity: (0,1,0,0) */
+
+#demo {
+  border: 2px solid red;
+}
+
+/* Case 5 */
+
+/* specificity: (0,0,0,1) */
+p {
+  text-transform: lowercase;
+}
+
+/* specificity: (0,0,1,0) */
+
+.text {
+  text-transform: capitalize;
+}
+
+/* specificity: (0,1,0,0) */
+
+#demo {
+  text-transform: uppercase !important;
+}
