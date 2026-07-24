@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="checkout_form.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Payment / Checkout Form</h1>
+    </header>
+
+    <main>
+      <form>
+        <fieldset>
+          <legend>Fields marked * are required</legend>
+        </fieldset>
+
+        <fieldset>
+          <legend>Delivery Address</legend>
+          <div class="form-row">
+            <label for="name"
+              >Enter your Full name:
+              <span class="required" aria-hidden="true">*</span></label
+            >
+            <div class="field-wrapper">
+              <input type="text" id="name" name="name" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="address-line1">Address Line 1:</label>
+            <div class="field-wrapper">
+              <input
+                type="text"
+                id="address-line1"
+                name="address-line1"
+                autocomplete="address-line1"
+                placeholder="Street address, P.O. box, house name"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="address-line2"
+              >Address Line 2: <span class="required">*</span></label
+            >
+            <div class="field-wrapper">
+              <input
+                type="text"
+                id="address-line2"
+                name="address-line2"
+                autocomplete="address-line2"
+                placeholder="Apartment, suite, unit, building, floor"
+              />
+            </div>
+          </div>
+
+          <div class="paired-row">
+            <div class="form-row">
+              <label for="city"
+                >Enter your city: <span class="required">*</span></label
+              >
+              <div class="field-wrapper">
+                <input type="text" id="city" name="city" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="postcode"
+                >Enter your postcode:
+                <span class="required" aria-hidden="true">*</span></label
+              >
+              <div class="field-wrapper">
+                <input type="number" id="postcode" name="postcode" required />
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row has-error">
+            <label for="country"
+              >Select country:
+              <span class="required" aria-hidden="true">*</span></label
+            >
+            <div class="field-wrapper">
+              <input
+                type="text"
+                id="country"
+                list="countries"
+                placeholder="e.g Canada"
+                name="country"
+                required
+              />
+
+              <span class="error-message"
+                >Please select a valid country from the list.</span
+              >
+            </div>
+          </div>
+
+          <datalist id="countries">
+            <option value="India"></option>
+            <option value="United States"></option>
+            <option value="Canada"></option>
+            <option value="Australia"></option>
+            <option value="South Africa"></option>
+            <option value="Argentina"></option>
+            <option value="Belgium"></option>
+            <option value="Germany"></option>
+            <option value="England"></option>
+            <option value="Poland"></option>
+            <option value="Austria"></option>
+            <option value="Algeria"></option>
+            <option value="Spain"></option>
+            <option value="France"></option>
+            <option value="Norway"></option>
+            <option value="Brazil"></option>
+            <option value="Switzerland"></option>
+            <option value="Ireland"></option>
+            <option value="Greece"></option>
+            <option value="Portugal"></option>
+          </datalist>
+        </fieldset>
+
+        <fieldset>
+          <legend>Payment Details</legend>
+
+          <div class="form-row">
+            <label for="cardnumber"
+              >Enter your card number:
+              <span class="required" aria-hidden="true">*</span></label
+            >
+            <div class="field-wrapper">
+              <input
+                type="tel"
+                id="cardnumber"
+                name="cardnumber"
+                inputmode="numeric"
+                pattern="[0-9]{16}"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="paired-row">
+            <div class="form-row">
+              <label for="expiry"
+                >Enter your expiry month and year:
+                <span class="required" aria-hidden="true">*</span></label
+              >
+              <div class="field-wrapper">
+                <input
+                  type="month"
+                  id="expiry"
+                  name="expiry"
+                  min="2026-08"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="cvv"
+                >Enter CVV:
+                <span class="required" aria-hidden="true">*</span></label
+              >
+              <div class="field-wrapper">
+                <input
+                  type="password"
+                  id="cvv"
+                  name="cvv"
+                  maxlength="4"
+                  aria-describedby="ccv-info"
+                  pattern="[0-9]+"
+                  required
+                />
+                <span id="ccv-info" class="info-text"
+                  >3 or 4 digits on the back of your card</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="ordernotes">Enter notes:</label>
+            <div class="field-wrapper">
+              <textarea
+                name="ordernotes"
+                id="ordernotes"
+                rows="3"
+                maxlength="500"
+              ></textarea>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="form-actions">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
