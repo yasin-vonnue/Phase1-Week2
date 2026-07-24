@@ -1,0 +1,158 @@
+.container {
+  display: flex;
+}
+
+.container div {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 5px;
+}
+
+.box1 {
+  justify-content: flex-start;
+  background-color: lightblue;
+}
+
+.box2 {
+  justify-content: flex-end;
+  background-color: lightcoral;
+}
+
+.box3 {
+  justify-content: center;
+  background-color: lightsalmon;
+}
+
+.box4 {
+  justify-content: space-between;
+  background-color: lightcyan;
+}
+
+.box5 {
+  justify-content: space-around;
+  background-color: aquamarine;
+}
+
+.box6 {
+  justify-content: space-evenly;
+  background-color: lightseagreen;
+}
+
+.box7 {
+  align-items: flex-start;
+  background-color: lightblue;
+}
+
+.box8 {
+  align-items: flex-end;
+  background-color: lightcoral;
+}
+
+.box9 {
+  align-items: center;
+  background-color: lightsalmon;
+}
+
+.box10 {
+  align-items: stretch;
+  background-color: lightblue;
+}
+
+.box11 {
+  align-items: baseline;
+  background-color: aquamarine;
+}
+
+.box11 div:nth-child(2) {
+  font-size: 30px;
+}
+
+.box11 div:nth-child(4) {
+  font-size: 20px;
+}
+
+.box7,
+.box8,
+.box9,
+.box10,
+.box11 {
+  height: 100px;
+}
+
+.box12,
+.box13,
+.box14,
+.box15,
+.box16,
+.box17 {
+  flex-wrap: wrap;
+  height: 250px;
+}
+
+.box12 div,
+.box13 div,
+.box14 div,
+.box15 div,
+.box16 div,
+.box17 div {
+  width: 120px;
+}
+
+.box12 {
+  align-content: flex-start;
+  background-color: lightcoral;
+}
+
+.box13 {
+  align-content: flex-end;
+  background-color: lightsalmon;
+}
+
+.box14 {
+  align-content: center;
+  background-color: lightcyan;
+}
+
+.box15 {
+  align-content: space-between;
+  background-color: aquamarine;
+}
+
+.box16 {
+  align-content: space-around;
+  background-color: lightseagreen;
+}
+
+.box17 {
+  align-content: stretch;
+  background-color: lightblue;
+}
+
+.box18 {
+  flex-direction: row;
+  background-color: lightcyan;
+}
+
+.box19 {
+  flex-direction: row-reverse;
+  background-color: aquamarine;
+}
+
+.box20 {
+  flex-direction: column;
+  background-color: lightseagreen;
+}
+
+.box21 {
+  flex-direction: column-reverse;
+  background-color: lightblue;
+}
+
+.box18 div,
+.box19 div,
+.box20 div,
+.box21 div {
+  border: 1px solid black;
+  padding: 10px;
+  margin: 5px;
+}
