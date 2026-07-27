@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
+
+h2 {
+  margin: 30px 0 15px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background: steelblue;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.linear {
+  transition: transform 1s linear;
+}
+
+.ease {
+  transition: transform 1s ease;
+}
+
+.ease-in {
+  transition: transform 1s ease-in;
+}
+
+.ease-out {
+  transition: transform 1s ease-out;
+}
+
+.ease-in-out {
+  transition: transform 1s ease-in-out;
+}
+
+.box:hover {
+  transform: translateY(-30px);
+}
+
+.bounce-btn {
+  margin: 20px 0;
+  padding: 12px 24px;
+  border: none;
+  background: lightskyblue;
+  color: white;
+  cursor: pointer;
+
+  transition:
+    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+    outline-color 0.3s,
+    outline-offset 0.3s;
+}
+
+.bounce-btn:hover {
+  transform: scale(1.15);
+}
+
+.card {
+  width: 320px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+}
+
+.card h3,
+.card p,
+.card button {
+  opacity: 1;
+  transform: translateY(20px);
+}
+
+.card h3 {
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+}
+
+.card p {
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+  transition-delay: 50ms;
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+  transition-delay: 100ms;
+}
+
+.card:hover h3,
+.card:hover p,
+.card:hover button {
+  transform: translateY(0);
+}
+
+button {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition:
+    outline-color 0.3s,
+    outline-offset 0.3s;
+}
+
+button:focus-visible {
+  outline-color: dodgerblue;
+  outline-offset: 5px;
+}
