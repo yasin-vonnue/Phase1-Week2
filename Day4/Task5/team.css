@@ -32,10 +32,11 @@ nav a {
   color: #333;
 }
 
-.fitlers {
+.filters {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
+  justify-content: center;
 }
 
 .filters a {
@@ -43,12 +44,6 @@ nav a {
   color: white;
   padding: 8px 12px;
   text-decoration: none;
-}
-
-.department {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
 }
 
 .department h2 {
@@ -96,14 +91,32 @@ figure:hover .social {
 
 .department {
   display: none;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
-.derpartment:target {
+.department:target {
+  display: grid;
+}
+
+.social a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+body:not(:has(.department:target)) #design {
   display: grid;
 }
 
 @media (max-width: 768px) {
-  section {
+  .department {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .department {
+    grid-template-columns: 1fr;
   }
 }
