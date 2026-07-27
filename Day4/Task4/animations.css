@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
+
+h2 {
+  margin: 30px 0 15px;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+
+  border: 5px solid white;
+  border-top-color: steelblue;
+  border-radius: 50%;
+}
+
+.skeleton-card {
+  width: 300px;
+  padding: 20px;
+  background: white;
+}
+
+.skeleton-image,
+.skeleton-text {
+  background: #ddd;
+  margin-bottom: 10px;
+  height: 20px;
+}
+
+.skeleton-image {
+  height: 150px;
+}
+
+.short {
+  width: 60%;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  background: white;
+  border: 1px solid white;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.bell {
+  font-size: 40px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .spinner {
+    animation: rotate 1s linear infinite;
+  }
+
+  @keyframes shimmer {
+    from {
+      background-position: -300px 0;
+    }
+
+    to {
+      background-position: 300px 0;
+    }
+  }
+
+  .skeleton-image,
+  .skeleton-text {
+    background: linear-gradient(90deg, #ddd, #f5f5f5, #ddd);
+    background-size: 300% 100%;
+
+    animation: shimmer 1.5s infinite alternate;
+  }
+
+  @keyframes cardEnter {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .card.visible {
+    animation: cardEnter 0.5s ease forwards;
+  }
+
+  @keyframes shake {
+    0%,
+    100% {
+      transform: rotate(0);
+    }
+
+    25% {
+      transform: rotate(-15deg);
+    }
+
+    50% {
+      transform: rotate(15deg);
+    }
+
+    75% {
+      transform: rotate(-10deg);
+    }
+  }
+
+  .bell:hover {
+    animation: shake 0.5s ease;
+  }
+}
