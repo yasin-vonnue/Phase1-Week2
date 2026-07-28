@@ -144,3 +144,172 @@ html {
   margin-bottom: 4rem;
   scroll-margin-top: 200px;
 }
+
+.form-group {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 1rem;
+
+  border: 2px solid var(--color-secondary);
+  border-radius: var(--radius);
+
+  font-size: 1rem;
+  background: var(--color-bg);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.form-group label,
+.select-wrapper label {
+  position: absolute;
+
+  left: 1rem;
+  top: 1rem;
+
+  color: var(--color-secondary);
+
+  pointer-events: none;
+
+  transition: 0.25s ease;
+
+  background: transparent;
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  transform: translateY(-1.6rem) scale(0.85);
+
+  background: var(--color-bg);
+
+  padding: 0 0.4rem;
+
+  color: var(--color-primary);
+}
+
+.select-wrapper {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.select-wrapper select {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid var(--color-secondary);
+  border-radius: var(--radius);
+
+  appearance: none;
+
+  background: var(--color-bg);
+  cursor: pointer;
+}
+
+.select-wrapper select:focus + label,
+.select-wrapper select:valid + label {
+  transform: translateY(-1.6rem) scale(0.85);
+
+  background: var(--color-bg);
+
+  padding: 0 0.4rem;
+
+  color: var(--color-primary);
+}
+
+.select-wrapper::after {
+  content: "\2193";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-20%);
+  pointer-events: none;
+  color: var(--color-secondary);
+}
+
+.checkbox {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.75rem;
+
+  cursor: pointer;
+
+  margin-bottom: 2rem;
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkbox span {
+  width: 20px;
+
+  height: 20px;
+
+  border: 2px solid var(--color-secondary);
+
+  border-radius: 4px;
+}
+
+.checkbox input:checked + span {
+  background: var(--color-primary);
+
+  border-color: var(--color-primary);
+}
+
+.checkbox input:checked + span::after {
+  content: "✓";
+
+  color: white;
+
+  display: block;
+
+  text-align: center;
+}
+
+.map-container {
+  max-width: 900px;
+
+  margin-top: 20px;
+
+  border-radius: var(--radius);
+
+  overflow: hidden;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.map-container iframe {
+  width: 100%;
+
+  height: 450px;
+
+  display: block;
+}
+
+.form-group.success input,
+.form-group.success textarea {
+  border-color: green;
+}
+
+.form-group.error input,
+.form-group.error textarea {
+  border-color: red;
+}
+
+.form-group.success label {
+  color: green;
+}
+
+.form-group.error label {
+  color: red;
+}

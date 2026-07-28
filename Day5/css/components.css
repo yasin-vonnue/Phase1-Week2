@@ -304,4 +304,16 @@
   .filter-bar {
     flex-wrap: wrap;
   }
+
+  .map-container iframe {
+    height: 300px;
+  }
+
+  form {
+    padding: 0;
+  }
+
+  fieldset {
+    padding: 1rem;
+  }
 }
