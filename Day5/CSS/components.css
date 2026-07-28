@@ -125,6 +125,20 @@
   .values-grid {
     grid-template-columns: 1fr;
   }
+
+  .footer-columns {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .legal-links {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 480px) {
