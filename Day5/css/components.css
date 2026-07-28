@@ -6,23 +6,49 @@
   padding: 1rem 2rem;
 }
 
-.logo img {
-  height: 45px;
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
-.navlinks {
-  display: flex;
-  gap: 1.5rem;
+.logo img {
+  height: 45px;
 }
 
 .navlinks a {
   color: var(--color-bg);
   text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: var(--radius);
+  transition: 0.3s ease;
 }
 
 .navlinks a:hover,
 .navlinks a:focus-visible {
-  text-decoration: underline;
+  background: var(--color-primary);
+}
+
+.navlinks a[aria-current="page"] {
+  background: var(--color-primary);
+}
+
+button {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius);
+  transition: 0.3s ease;
+}
+
+button:hover,
+button:focus-visible {
+  background: #1d4ed8;
+  transform: translateY(-2px);
 }
 
 .hero {
@@ -48,11 +74,13 @@
   margin-top: 1rem;
 }
 
-.card {
+.card,
+.team-card,
+.service-card {
   background: white;
-  padding: 1.5rem;
   border-radius: var(--radius);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 2.5rem;
 }
 
 .testimonials-row {
@@ -157,10 +185,7 @@
 }
 
 .team-card {
-  background: white;
-  border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
   transition:
     transform 0.3s ease,
@@ -210,11 +235,38 @@
   .navbar {
     flex-direction: column;
     gap: 1rem;
+    padding: 1rem;
+  }
+
+  .logo img {
+    height: 40px;
   }
 
   .navlinks {
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  navlinks a {
+    width: 100%;
+    max-width: 250px;
+    text-align: center;
+    padding: 0.6rem 1rem;
+    border-radius: var(--radius);
+  }
+
+  .navlinks a:hover,
+  .navlinks a:focus-visible {
+    background: var(--color-primary);
+    text-decoration: none;
+  }
+
+  .navlinks a[aria-current="page"] {
+    background: var(--color-primary);
+    font-weight: bold;
   }
 
   .features-grid {
@@ -266,14 +318,22 @@
 }
 
 @media (max-width: 480px) {
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--color-secondary);
+  }
+
   .navbar {
-    padding: 1rem;
+    padding: 0.75rem;
   }
 
   .navlinks {
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
+    max-width: 100%;
   }
 
   .hero-content h2 {

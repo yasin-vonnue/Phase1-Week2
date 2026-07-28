@@ -42,7 +42,6 @@
           <a href="./about.html">About</a>
           <a href="./team.html">Team</a>
           <a href="./services.html">Services</a>
-          <a href="./products.html">Our Products</a>
           <a href="" aria-current="page">Contact Us</a>
         </div>
       </nav>
@@ -55,17 +54,29 @@
           <legend>Personal Details</legend>
 
           <div class="form-group">
-            <input type="text" id="name" name="name" placeholder=" " />
+            <input type="text" id="name" name="name" placeholder=" " required />
             <label for="name">Enter your Name:</label>
           </div>
 
           <div class="form-group">
-            <input type="email" name="email" id="email" placeholder=" " />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder=" "
+              required
+            />
             <label for="email">Enter your Email:</label>
           </div>
 
           <div class="form-group">
-            <input type="tel" name="phone" id="phone" placeholder=" " />
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder=" "
+              required
+            />
             <label for="phone">Enter your Phone number:</label>
           </div>
 
@@ -79,7 +90,12 @@
           </div>
 
           <div class="form-group">
-            <textarea name="message" id="message" placeholder=" "></textarea>
+            <textarea
+              name="message"
+              id="message"
+              placeholder=" "
+              required
+            ></textarea>
             <label for="message">Write your Message:</label>
           </div>
 
@@ -89,7 +105,7 @@
             Subscribe to our newsletter
           </label>
 
-          <button type="submit">Submit</button>
+          <button type="submit" class="btn">Submit</button>
         </fieldset>
         <br />
       </form>

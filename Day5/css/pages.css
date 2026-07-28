@@ -167,8 +167,7 @@ html {
   resize: vertical;
 }
 
-.form-group label,
-.select-wrapper label {
+.form-group label {
   position: absolute;
 
   left: 1rem;
@@ -181,6 +180,12 @@ html {
   transition: 0.25s ease;
 
   background: transparent;
+}
+
+.select-wrapper label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary);
 }
 
 .form-group input:focus + label,
@@ -196,6 +201,12 @@ html {
   color: var(--color-primary);
 }
 
+.form-group input:focus,
+.form-group textarea:focus,
+.select-wrapper select:focus {
+  border-color: var(--color-primary);
+}
+
 .select-wrapper {
   position: relative;
   margin-bottom: 2rem;
@@ -204,13 +215,15 @@ html {
 .select-wrapper select {
   width: 100%;
   padding: 1rem;
+
   border: 2px solid var(--color-secondary);
   border-radius: var(--radius);
 
   appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 
   background: var(--color-bg);
-  cursor: pointer;
 }
 
 .select-wrapper select:focus + label,
@@ -234,6 +247,15 @@ html {
   color: var(--color-secondary);
 }
 
+.select-wrapper.success select {
+  border-color:green;
+}
+
+
+.select-wrapper.error select {
+  border-color:red;
+}
+
 .checkbox {
   display: flex;
 
@@ -247,7 +269,13 @@ html {
 }
 
 .checkbox input {
-  display: none;
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox input:focus-visible + span {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 .checkbox span {
