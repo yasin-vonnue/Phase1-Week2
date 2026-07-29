@@ -9,15 +9,12 @@
 :root {
   --color-primary: #2563eb;
   --color-secondary: #64748b;
-  --color-bg: #ffffff;
+  --color-bg: #fff;
   --color-text: #1f2937;
-
   --font-primary: "Inter", sans-serif;
-
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
-
   --radius: 8px;
 }
 
