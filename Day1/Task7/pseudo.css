@@ -1,0 +1,73 @@
+nav {
+  background: black;
+}
+
+a {
+  color: white;
+  padding: 10px;
+}
+
+a:hover {
+  background: coral;
+}
+
+/*
+   :focus affects all focus events, including mouse clicks.
+   :focus-visible only shows focus styles when the browser
+   determines they are needed, such as keyboard navigation.
+*/
+
+a:focus-visible {
+  outline: 2px solid yellow;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+}
+
+label {
+  position: relative;
+  padding-left: 20px;
+}
+
+label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid black;
+}
+
+input:checked + label::before {
+  content: "yes";
+}
+
+ol {
+  counter-reset: item;
+  list-style: none;
+}
+
+li {
+  counter-increment: item;
+}
+
+li::before {
+  content: "Item " counter(item) ": ";
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  display: none;
+  background: black;
+  color: white;
+}
+
+.tooltip:hover::after {
+  display: block;
+}

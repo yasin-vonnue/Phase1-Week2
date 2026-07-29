@@ -1,0 +1,39 @@
+div:hover {
+  background-color: grey;
+}
+
+input:focus {
+  background-color: yellow;
+}
+
+p:first-child {
+  color: blue;
+}
+
+p:last-child {
+  color: red;
+}
+
+p:nth-child(3n + 1) {
+  background-color: grey;
+}
+
+h2::before {
+  content: "*";
+}
+
+h2::after {
+  content: "-";
+}
+
+a[href^="#"] {
+  color: yellow;
+}
+
+a[href^="https"] {
+  color: green;
+}
+
+.card.featured {
+  background-color: black;
+}

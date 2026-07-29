@@ -1,0 +1,74 @@
+:root {
+  --primary: #e62429;
+  --dark: #111;
+  --light: #f5f5f5;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--light);
+  color: var(--dark);
+}
+
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.header,
+.footer {
+  background: var(--dark);
+  color: var(--white);
+  padding: 15px;
+  text-align: center;
+}
+
+.navbar {
+  background: var(--primary);
+  padding: 10px;
+}
+
+.navbar a {
+  color: var(--white);
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 20px;
+}
+
+.features,
+.testimonials {
+  background: var(--white);
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px #ccc;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+blockquote {
+  margin: 0;
+}
