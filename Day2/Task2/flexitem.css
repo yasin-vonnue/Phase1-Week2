@@ -1,0 +1,123 @@
+.box1 {
+  display: flex;
+  border: 2px solid black;
+  height: 80px;
+}
+
+.box1 div {
+  flex-basis: 100px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.grow0 {
+  flex-grow: 0;
+}
+.grow1 {
+  flex-grow: 1;
+}
+.grow2 {
+  flex-grow: 2;
+}
+.grow3 {
+  flex-grow: 1;
+}
+.grow4 {
+  flex-grow: 0;
+}
+
+.box2 {
+  display: flex;
+  width: 600px;
+  border: 2px solid black;
+}
+
+.box2 div {
+  width: 250px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.s1 {
+  flex-shrink: 0;
+}
+.s2 {
+  flex-shrink: 1;
+}
+.s3 {
+  flex-shrink: 2;
+}
+.s4 {
+  flex-shrink: 3;
+}
+
+.box3 {
+  display: flex;
+  border: 2px solid black;
+}
+
+.box3 div {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.basis0 {
+  flex-basis: 0;
+}
+
+.basis1 {
+  flex-basis: auto;
+}
+
+.basis2 {
+  flex-basis: 200px;
+}
+
+.basis3 {
+  flex-basis: 33.333%;
+}
+
+.box4 {
+  display: flex;
+}
+
+.box4 div {
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.order5 {
+  order: 1;
+}
+
+.order1 {
+  order: 2;
+}
+
+.order2 {
+  order: 3;
+}
+
+.order3 {
+  order: 4;
+}
+
+.order4 {
+  order: 5;
+}
+
+.box5 {
+  display: flex;
+  align-items: flex-start;
+  height: 180px;
+  border: 2px solid black;
+}
+
+.box5 div {
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.special {
+  align-self: flex-end;
+}
