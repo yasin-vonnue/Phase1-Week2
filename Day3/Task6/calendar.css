@@ -1,0 +1,84 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: 80px repeat(7, 1fr);
+  gap: 8px;
+
+  width: 95vw;
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+.day-name,
+.week-head {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 18px;
+}
+
+.date,
+.week-number {
+  min-height: 150px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  background: #eee;
+  font-size: 22px;
+}
+
+.first-day {
+  grid-column: 4;
+}
+
+.event {
+  background: lightblue;
+}
+
+.today::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: royalblue;
+  top: 5px;
+  right: 5px;
+}
+
+.today {
+  position: relative;
+}
+
+@media (max-width: 480px) {
+  .calendar {
+    display: block;
+    width: 100%;
+  }
+
+  .week-head,
+  .day-name {
+    display: none;
+  }
+
+  .week-number {
+    display: none;
+  }
+
+  .date {
+    min-height: 60px;
+    margin-bottom: 5px;
+  }
+}
