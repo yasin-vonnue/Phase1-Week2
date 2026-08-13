@@ -1,0 +1,55 @@
+@media print {
+  .navbar,
+  .sidebar,
+  .btn,
+  .ad {
+    display: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .accordion-panel,
+  .tab-panel {
+    display: block !important;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+    break-after: avoid-page;
+  }
+
+  .service,
+  .accordion,
+  .tabs {
+    page-break-inside: avoid;
+  }
+
+  .footer {
+    color: black;
+    background: white;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+}
